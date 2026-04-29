@@ -12,9 +12,9 @@ import m from "./Images/m.png";
 import vein from "./Images/vine.png";
 import heart from "./Images/heart.png";
 import quiz from './Images/quiz.png'
-import car from './Images/image.png'
 import rain from './Images/rain.png'
 import Elbo from './Images/elcomparafor.png'
+import carg from './Images/carmen.png'
 
 const projects = [
   {
@@ -65,14 +65,14 @@ const projects = [
     githubLink: "https://github.com/UZAIR676/Heart-Disease-Prediction-using-Machine-Learning-",
     category: "datascience",
   },
-  {
-    title: "Car price Prediction",
-    description: "This dataset analyzes car price trends by comparing selling prices with original prices. The results show that all recorded cars have experienced a price decrease.",
-    image: car,
-    tags: ["Python", "Jupyter Notebook", "Machine Learning", " LogisticRegression"],
-    githubLink: "https://github.com/UZAIR676/Heart-Disease-Prediction-using-Machine-Learning-",
-    category: "datascience",
-  },
+ {
+  title: "Car Price Prediction",
+  description: "ML web app that predicts used car prices from the Indian market using Random Forest Regressor with 92% accuracy. Features a full-stack setup with Flask REST API and React.js frontend with dark/light mode.",
+  image: carg,
+  tags: ["Python", "React.js", "Flask", "Random Forest", "Machine Learning", "Scikit-learn"],
+  githubLink: "https://github.com/UZAIR676/car-price-prediction",
+  category: "datascience",
+},
   {
     title: "Rain Prediction",
     description: "This project predicts rainfall using machine learning techniques, leveraging historical weather data. It involves data preprocessing, model training, and evaluation to provide accurate rainfall predictions",
