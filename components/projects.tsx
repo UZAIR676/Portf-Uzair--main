@@ -70,7 +70,7 @@ const projects = [
   description: "ML web app that predicts used car prices from the Indian market using Random Forest Regressor with 92% accuracy. Features a full-stack setup with Flask REST API and React.js frontend with dark/light mode.",
   image: carg,
   tags: ["Python", "React.js", "Flask", "Random Forest", "Machine Learning", "Scikit-learn"],
-  githubLink: "https://github.com/UZAIR676/car-price-prediction",
+  githubLink: "https://github.com/UZAIR676/car_prediction-",
   category: "datascience",
 },
   {
