@@ -43,20 +43,19 @@ export default function Skills() {
       
 
     ],
-    
-    dataScience: [
-      { name: "Machine Learning", level: 75, icon: "🤖" },
-      { name: "Deep Learning", level: 70, icon: "🧠" },
-      { name: "Python", level: 90, icon: "🐍" },
-      { name: "Pandas", level: 80, icon: "📊" },
-      { name: "NumPy", level: 80, icon: "🔢" },
-      { name: "Scikit-learn", level: 75, icon: "🔬" },
-      { name: "TensorFlow", level: 80, icon: "🤖" },
-      { name: "Natural Language Processing", level: 60, icon: "🧠" },
-      { name: "Data Visualization", level: 85, icon: "📈" },
-      { name: "MLOps", level: 65, icon: "⚙️" },
-      { name: "Model Deployment", level: 70, icon: "🚀" }
-  ]
+   dataScience: [
+  { name: "Machine Learning", level: 65, icon: "🤖" },
+  { name: "Deep Learning", level: 35, icon: "🧠" },
+  { name: "Python", level: 85, icon: "🐍" },
+  { name: "Pandas", level: 75, icon: "📊" },
+  { name: "NumPy", level: 70, icon: "🔢" },
+  { name: "Scikit-learn", level: 65, icon: "🔬" },
+  { name: "TensorFlow", level: 40, icon: "🤖" },
+  { name: "Natural Language Processing", level: 45, icon: "🧠" },
+  { name: "Data Visualization", level: 80, icon: "📈" },
+  { name: "MLOps", level: 35, icon: "⚙️" },
+  { name: "Model Deployment", level: 50, icon: "🚀" }
+]
     
 // kia hal ha sonio 
   }
