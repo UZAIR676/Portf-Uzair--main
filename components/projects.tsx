@@ -12,6 +12,7 @@ import rain from "./Images/rain.png";
 import Elbo from "./Images/elcomparafor.png";
 import carg from "./Images/carmen.png";
 import quiz from './Images/quizapp.png'
+import taskpilot from "./Images/taskapp.png";
 
 const projects = [
   {
@@ -21,19 +22,19 @@ const projects = [
     image: e,
     tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     githubLink: "https://github.com/UZAIR676/Ecommerce",
-    demoLink: "https://store-app-ten-rho.vercel.app/", // add your live URL here
+    demoLink: "https://store-app-ten-rho.vercel.app/",
     category: "mern",
     accent: "purple",
   },
   {
-    title: "Movie App",
+    title: "TaskPilot",
     description:
-      "Full-stack MERN movie application featuring search, admin controls, and user interactions.",
-    image: m,
-    tags: ["React", "Node.js", "Tailwind CSS", "MongoDB", "Express.js"],
-    githubLink: "https://github.com/UZAIR676/MOVIE_APP",
-    demoLink: "", // add your live URL here
-    category: "mern",
+      "AI-powered task manager with Spring Boot REST API and Google Gemini integration. Supports natural language task creation, AI summarization, and subtask breakdown.",
+    image: taskpilot,
+    tags: ["Java", "Spring Boot", "React", "Gemini AI", "H2"],
+    githubLink: "https://github.com/UZAIR676/TaskPilot",
+    demoLink: "https://task-pilot-lac.vercel.app/",
+    category: "mern", // ✅ Fixed: was "fullstack", now "mern"
     accent: "purple",
   },
   {
@@ -43,7 +44,7 @@ const projects = [
     image: quiz,
     tags: ["React", "Node.js", "Tailwind CSS", "CSS"],
     githubLink: "https://github.com/UZAIR676/Quiz-App-",
-    demoLink: "", // add your live URL here
+    demoLink: "",
     category: "mern",
     accent: "purple",
   },
@@ -65,7 +66,7 @@ const projects = [
     image: vein,
     tags: ["Python", "Random Forest", "SVM", "Jupyter Notebook"],
     githubLink: "https://github.com/UZAIR676/-Wine-Quality-Prediction-ML",
-    demoLink: "", // add your live URL here
+    demoLink: "",
     category: "datascience",
     accent: "teal",
   },
@@ -76,7 +77,7 @@ const projects = [
     image: heart,
     tags: ["Python", "Scikit-learn", "Jupyter Notebook", "Data Analysis"],
     githubLink: "https://github.com/UZAIR676/Heart-Disease-Prediction-using-Machine-Learning-",
-    demoLink: "", // add your live URL here
+    demoLink: "",
     category: "datascience",
     accent: "teal",
   },
@@ -87,7 +88,7 @@ const projects = [
     image: carg,
     tags: ["Python", "React.js", "Flask", "Random Forest", "Scikit-learn"],
     githubLink: "https://github.com/UZAIR676/car_prediction-",
-    demoLink: "", // add your live URL here
+    demoLink: "",
     category: "datascience",
     accent: "teal",
   },
@@ -98,7 +99,7 @@ const projects = [
     image: rain,
     tags: ["Python", "Random Forest", "Jupyter Notebook"],
     githubLink: "https://github.com/UZAIR676/Rainfall-Prediction-Using-Machine-Learning",
-    demoLink: "", // add your live URL here
+    demoLink: "",
     category: "datascience",
     accent: "teal",
   },
@@ -256,7 +257,6 @@ export default function Projects() {
 
                     {/* Buttons row */}
                     <div className="flex items-center gap-3 flex-wrap">
-                      {/* Code button — always shown */}
                       <a
                         href={project.githubLink}
                         target="_blank"
@@ -267,7 +267,6 @@ export default function Projects() {
                         Code
                       </a>
 
-                      {/* Demo button — only shown when demoLink is set */}
                       {project.demoLink && (
                         <a
                           href={project.demoLink}
