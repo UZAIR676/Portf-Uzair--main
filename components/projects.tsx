@@ -8,10 +8,10 @@ import e from "./Images/e.png";
 import m from "./Images/m.png";
 import vein from "./Images/vine.png";
 import heart from "./Images/heart.png";
-import quiz from "./Images/quiz.png";
 import rain from "./Images/rain.png";
 import Elbo from "./Images/elcomparafor.png";
 import carg from "./Images/carmen.png";
+import quiz from './Images/quizapp.png'
 
 const projects = [
   {
