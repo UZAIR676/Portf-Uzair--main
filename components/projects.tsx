@@ -13,6 +13,7 @@ import Elbo from "./Images/elcomparafor.png";
 import carg from "./Images/carmen.png";
 import quiz from './Images/quizapp.png'
 import taskpilot from "./Images/taskapp.png";
+import music from './Images/musicai.png'
 
 const projects = [
   {
@@ -58,6 +59,17 @@ const projects = [
     demoLink: "https://elcomparador.netlify.app/",
     category: "mern",
     accent: "purple",
+  },
+  {
+    title: "Mood Music AI",
+    description:
+      "Transformer-based AI that generates original piano music from scratch. Trained on Google's MAESTRO dataset with mood and tempo control — Happy, Sad, Dramatic, Relaxing.",
+    image: music,
+    tags: ["PyTorch", "Transformer", "Flask", "pretty_midi", "MAESTRO"],
+    githubLink: "https://github.com/UZAIR676/mood-music-ai",
+    demoLink: "",
+    category: "datascience",
+    accent: "teal",
   },
   {
     title: "Wine Quality Prediction",
