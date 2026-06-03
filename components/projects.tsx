@@ -61,16 +61,16 @@ const projects = [
     accent: "purple",
   },
   {
-    title: "Mood Music AI",
-    description:
-      "Transformer-based AI that generates original piano music from scratch. Trained on Google's MAESTRO dataset with mood and tempo control — Happy, Sad, Dramatic, Relaxing.",
-    image: music,
-    tags: ["PyTorch", "Transformer", "Flask", "pretty_midi", "MAESTRO"],
-    githubLink: "https://github.com/UZAIR676/mood-music-ai",
-    demoLink: "",
-    category: "datascience",
-    accent: "teal",
-  },
+  title: "Mood Music AI",
+  description:
+    "Transformer trained from scratch on Google's MAESTRO dataset to generate original piano music. Architecture: 3-layer decoder, 4 attention heads, 128-dim embeddings, 512 FFN. Custom tokenizer encodes each note into 4 tokens — pitch, velocity, timing, duration — across a 364-token vocab. Mood control via musical scale filtering (Major, Minor, Pentatonic, Diminished) with per-mood temperature. 10 epochs, AdamW, lr 3e-4.",
+  image: music,
+  tags: ["PyTorch", "Transformer", "MAESTRO", "Flask", "pretty_midi", "Top-K Sampling"],
+  githubLink: "https://github.com/UZAIR676/mood-music-ai",
+  demoLink: "",
+  category: "datascience",
+  accent: "teal",
+},
   {
     title: "Wine Quality Prediction",
     description:
