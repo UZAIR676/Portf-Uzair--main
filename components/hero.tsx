@@ -38,7 +38,7 @@ export default function Hero() {
           className="space-y-4"
         >
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-border/40 backdrop-blur-sm bg-card/30">
-            <span className="text-sm font-medium">Full Stack Developer and Data Scientist</span>
+            <span className="text-sm font-medium">Full Stack Developer and AI/ML Engineer</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">

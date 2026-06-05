@@ -70,7 +70,7 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-            <Link href="https://www.canva.com/design/DAGh1nZdQjs/UbVoR23YEQX8X4gi1aImXg/view?utm_content=DAGh1nZdQjs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd6a6ae8493" target="_blank" rel="noopener noreferrer">
+            <Link href="/Uzair_Resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button className="ml-4 bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 text-white border-0">
               Resume
             </Button>

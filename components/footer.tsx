@@ -26,7 +26,7 @@ export default function Footer() {
               Rana Muhammad Uzair
             </h3>
             <p className="text-muted-foreground max-w-xs">
-            A full-stack developer with a strong foundation in web development, currently expanding my expertise in Data Science and machine learning to create impactful digital solutions.
+           "Full Stack & AI/ML Engineer building web applications and generative AI models from scratch. Passionate about turning ideas into real products — from transformer-based music generation to full-stack platforms."
             </p>
           </motion.div>
 

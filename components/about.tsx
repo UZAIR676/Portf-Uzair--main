@@ -2,13 +2,9 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
-
 import peak from './peak.jpeg'
-
-
 
 export default function About() {
   const ref = useRef(null)
@@ -63,7 +59,7 @@ export default function About() {
             </div>
             <div className="absolute bottom-4 -right-4 z-30">
               <div className="px-4 py-2 bg-card/80 backdrop-blur-md rounded-lg border border-border/40 shadow-xl">
-                <p className="font-medium">MERN STACK</p>
+                <p className="font-medium">AI/ML + Full Stack</p>
               </div>
             </div>
           </motion.div>
@@ -76,21 +72,19 @@ export default function About() {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold">
-              Full Stack{" "}
+              Full Stack &{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
-                Developer & Aspiring Data Scientist
+                AI/ML Engineer
               </span>
             </h3>
-            <p className="text-muted-foreground">
-              I’m a passionate developer with 2+ years of experience building web applications using the MERN stack. I specialize in creating responsive, user-friendly interfaces with React and developing robust backend systems with Node.js. Currently, I’m expanding my expertise in Data Science, focusing on Machine Learning and Deep Learning.
+           <p className="text-muted-foreground">
+  I build things from scratch — full-stack web apps, machine learning pipelines, and AI-powered products. Based in New York, pursuing B.S. Computer Science at CUNY LaGuardia | John Jay College (GPA 3.2).
 </p>
 <p className="text-muted-foreground">
-  My journey in tech began at UET Taxila, and I’m now continuing my studies at LaGuardia Community College (CUNY) with the GPA of 3.2 .I’ve worked on multiple projects and websites, and I’m now focusing on growing my expertise in Data Science while continuing to build full-stack AI based applications.
-
+  I've shipped multiple live products, worked with real datasets, and built end-to-end applications. I care about building real things that work — not just tutorials.
 </p>
-
             <div className="flex flex-wrap gap-3 mt-6">
-              {["JavaScript", "Python","TypeScript", "React", "Next.js", "Node.js"," Data Analyst", "Machine Learning",'Data preprocessing and wrangling',"TensorFlow","Mongodb", "Deep Learning"].map((skill) => (
+              {["JavaScript", "Python", "TypeScript", "React", "Next.js", "Node.js", "PyTorch", "Machine Learning", "Flask", "MongoDB", "Deep Learning", "Generative AI"].map((skill) => (
                 <Badge
                   key={skill}
                   className="px-3 py-1 bg-gradient-to-r from-primary/10 to-purple-500/10 text-foreground border-0"
