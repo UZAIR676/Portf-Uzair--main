@@ -5,7 +5,6 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -70,7 +69,7 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-            <Link href="/Uzair_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/uzair.pdf" target="_blank" rel="noopener noreferrer">
             <Button className="ml-4 bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 text-white border-0">
               Resume
             </Button>
@@ -106,13 +105,14 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button className="mt-4 bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 text-white border-0">
-              Resume
-            </Button>
+            <Link href="/uzair.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
+              <Button className="mt-4 bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 text-white border-0">
+                Resume
+              </Button>
+            </Link>
           </nav>
         </motion.div>
       )}
     </header>
   )
 }
-
