@@ -14,6 +14,7 @@ import carg from "./Images/carmen.png";
 import quiz from './Images/quizapp.png'
 import taskpilot from "./Images/taskapp.png";
 import music from './Images/musicai.png'
+import nexa from './Images/nexagaurd.png'
 
 const projects = [
   {
@@ -26,6 +27,17 @@ const projects = [
     // demoLink: "https://store-app-ten-rho.vercel.app/",
     category: "mern",
     accent: "purple",
+  },
+  {
+  title: "NexaGuard",
+  description:
+  "Enterprise-grade financial security & market intelligence platform for US markets. Features an AI financial advisor powered by a locally-run Qwen 2.5 LLM, LSTM/XGBoost hybrid stock prediction, real-time transaction fraud scoring, face biometric authentication with liveness detection, and geo-IP impossible-travel detection — all wrapped in a full-stack FastAPI + React app with role-based admin controls.",
+  image: nexa,
+  tags: ["FastAPI", "React", "TensorFlow", "XGBoost", "DeepFace"],
+  githubLink: "https://github.com/UZAIR676/NexaGuard",
+  demoLink: "",
+  category: "datascience",
+  accent: "teal",
   },
   {
     title: "TaskPilot",
