@@ -78,7 +78,7 @@ export default function About() {
               </span>
             </h3>
            <p className="text-muted-foreground">
-  I build things from scratch — full-stack web apps, machine learning pipelines, and AI-powered products. Based in New York, pursuing B.S. Computer Science at CUNY LaGuardia | John Jay College (GPA 3.2).
+  I build things from scratch — full-stack web apps, machine learning pipelines, and AI-powered products. Based in New York, pursuing B.S. Computer Science at CUNY LaGuardia | John Jay College (GPA 3.31).
 </p>
 <p className="text-muted-foreground">
   I've shipped multiple live products, worked with real datasets, and built end-to-end applications. I care about building real things that work — not just tutorials.
