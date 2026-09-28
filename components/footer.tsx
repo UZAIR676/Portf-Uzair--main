@@ -72,7 +72,7 @@ export default function Footer() {
   {[
     { icon: <Github size={24} />, label: "GitHub", href: "https://github.com/UZAIR676", hoverColor: "hover:text-gray-400 hover:border-gray-400" },
     { icon: <Linkedin size={24} />, label: "LinkedIn", href: "https://www.linkedin.com/in/uzair-rana-uzair/", hoverColor: "hover:text-blue-600 hover:border-blue-600" },
-    { icon: <FaInstagram size={24} />, label: "Instagram", href: "https://www.instagram.com/ranauzair300/", hoverColor: "hover:text-pink-500 hover:border-pink-500" },
+    { icon: <FaInstagram size={24} />, label: "Instagram", href: "https://www.instagram.com/aeronox_/", hoverColor: "hover:text-pink-500 hover:border-pink-500" },
   ].map((social) => (
     <a
       key={social.label}

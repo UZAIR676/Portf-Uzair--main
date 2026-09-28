@@ -117,7 +117,7 @@ export default function Hero() {
   { 
     icon: <FaInstagram size={24} />, 
     label: "Instagram", 
-    href: "https://www.instagram.com/ranauzair300/",
+    href: "https://www.instagram.com/aeronox_/",
     gradient: "from-pink-500 to-purple-500"
   },
 ].map((social) => (
