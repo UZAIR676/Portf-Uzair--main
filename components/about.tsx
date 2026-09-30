@@ -4,7 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
-import peak from './peak.jpeg'
+import peak from './mainimg.jpeg'
+
 
 export default function About() {
   const ref = useRef(null)
