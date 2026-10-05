@@ -6,9 +6,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, MapPin, Phone, Send } from "lucide-react"
-import { MessageCircle } from "lucide-react";
-import emailjs from 'emailjs-com'
+import { Mail, MapPin, Phone, Send, MessageCircle } from "lucide-react"
+import emailjs from "emailjs-com"
+
+// EmailJS config. You can move these to .env.local later (NEXT_PUBLIC_EMAILJS_*).
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_0udfgyf"
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_2l3c6ys"
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "jP0wAi_NHFf-No7kj"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -28,33 +32,60 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Create the email data with the form data
+    // These variable names must match the {{variables}} in your EmailJS template
     const emailData = {
-      to_name: 'Your Name',  // Set this to a fixed recipient name or leave it as is
+      to_name: "Uzair",
+      to_email: "uzairranamuhammad7@gmail.com",
       from_name: formData.name,
       user_email: formData.email,
+      reply_to: formData.email,
+      subject: formData.subject,
       message: formData.message,
     }
 
-   
-    emailjs.send(
-      'service_5j5du3k',  
-      'template_2l3c6ys',  
-      emailData,          
-      'jP0wAi_NHFf-No7kj'  
-    )
-    .then((response) => {
-      console.log('Success:', response.text)
-      alert("Thanks for your message! I'll get back to you soon.")
-      setFormData({ name: "", email: "", subject: "", message: "" })
-      setIsSubmitting(false)
-    })
-    .catch((error) => {
-      console.log('Error:', error.text)
-      alert("Oops! Something went wrong. Please try again.")
-      setIsSubmitting(false)
-    })
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, emailData, EMAILJS_PUBLIC_KEY)
+      .then((response) => {
+        console.log("EmailJS success:", response.status, response.text)
+        alert("Thanks for your message! I'll get back to you soon.")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((error) => {
+        // Check this in the browser console (F12) to see the real reason
+        console.error("EmailJS error:", error)
+        alert("Oops! Something went wrong. Please try again.")
+      })
+      .finally(() => {
+        setIsSubmitting(false)
+      })
   }
+
+  const contactItems = [
+    {
+      icon: <Mail className="w-10 h-10 text-primary text-white" />,
+      title: "Email",
+      content: <span className="hover:text-white">uzairranamuhammad7@gmail.com</span>,
+      link: "mailto:uzairranamuhammad7@gmail.com",
+    },
+    {
+      icon: <MessageCircle className="w-10 h-10 text-green-500" />,
+      title: "WhatsApp",
+      content: <span className="hover:text-green-600">+1(347) 724-1605</span>,
+      link: "https://wa.me/13477241605",
+    },
+    {
+      icon: <Phone className="w-10 h-10 text-primary" />,
+      title: "Phone",
+      content: "+1(347) 724-1605",
+      link: "tel:+13477241605",
+    },
+    {
+      icon: <MapPin className="w-10 h-10 text-primary text-red-700" />,
+      title: "Location",
+      content: <span className="hover:text-red-600">New York, USA</span>,
+      link: "#",
+    },
+  ]
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
@@ -201,32 +232,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="space-y-6">
-              {[ 
-                { 
-                  icon: <Mail className="w-10 h-10 text-primary text-white" />, 
-                  title: "Email", 
-                  content: <span className=" hover:text-white">uzairranamuhammad7@gmail.com</span>, 
-                  link: "mailto:uzairranamuhammad7@gmail.com", 
-                },
-                { 
-                  icon: <MessageCircle className="w-10 h-10 text-green-500" />, 
-                  title: "WhatsApp", 
-                  content: <span className=" hover:text-green-600">+1(347) 724-1605 </span>,
-                  link: "https://wa.me/13477241605", 
-                },
-                { 
-                  icon: <Phone className="w-10 h-10 text-primary" />, 
-                  title: "Phone", 
-                  content: "+1(347) 724-1605", 
-                  link: "tel:03010053877", 
-                },
-                { 
-                  icon: <MapPin className="w-10 h-10 text-primary text-red-700" />, 
-                  title: "Location", 
-                  content: <span className="hover:text-red-600">  New York, USA </span>,
-                  link: "#", 
-                },
-              ].map((item, index) => (
+              {contactItems.map((item, index) => (
                 <Card key={index} className="backdrop-blur-sm bg-card/30 border-border/40 overflow-hidden">
                   <CardContent className="p-6 flex items-start gap-4">
                     <div className="p-3 rounded-full bg-primary/10">{item.icon}</div>
